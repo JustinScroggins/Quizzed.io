@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Quizzed.Entities\Quizzed.Entities.csproj" />
     <ProjectReference Include="..\Quizzed.LoggerService\Quizzed.LoggerService.csproj" />
   </ItemGroup>
 

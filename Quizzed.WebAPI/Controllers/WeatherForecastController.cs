@@ -28,7 +28,6 @@ namespace Quizzed.WebAPI.Controllers
             _logger.LogError("Here is an error message from our values controller.");
 
             return new string[] { "value1", "value2" };
-
         }
     }
 }
