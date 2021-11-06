@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Quizzed.Contracts;
+using Quizzed.LoggerService;
 
 namespace Quizzed.WebAPI.Extensions
 {
@@ -23,5 +21,8 @@ namespace Quizzed.WebAPI.Extensions
          {
 
          });
+
+        public static void ConfigureLoggerService(this IServiceCollection services) =>
+            services.AddScoped<ILoggerManager, LoggerManager>();
     }
 }
