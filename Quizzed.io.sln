@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31825.309
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quizzed.API", "Quizzed.API\Quizzed.API.csproj", "{A6685062-3AFA-48E4-BCA2-BE6A8A7AEDB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quizzed.Contracts", "Quizzed.Contracts\Quizzed.Contracts.csproj", "{6919AB14-CD12-4289-8DBA-67EBCD900CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quizzed.Contracts", "Quizzed.Contracts\Quizzed.Contracts.csproj", "{6919AB14-CD12-4289-8DBA-67EBCD900CFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quizzed.LoggerService", "Quizzed.LoggerService\Quizzed.LoggerService.csproj", "{D1D4B6AD-B0C0-405C-A7AC-0F567A9FCE86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quizzed.LoggerService", "Quizzed.LoggerService\Quizzed.LoggerService.csproj", "{D1D4B6AD-B0C0-405C-A7AC-0F567A9FCE86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quizzed.WebAPI", "Quizzed.WebAPI\Quizzed.WebAPI.csproj", "{858E99CE-EFD4-482C-85B2-F0BE9729FEA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6685062-3AFA-48E4-BCA2-BE6A8A7AEDB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6685062-3AFA-48E4-BCA2-BE6A8A7AEDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6685062-3AFA-48E4-BCA2-BE6A8A7AEDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6685062-3AFA-48E4-BCA2-BE6A8A7AEDB5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6919AB14-CD12-4289-8DBA-67EBCD900CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6919AB14-CD12-4289-8DBA-67EBCD900CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6919AB14-CD12-4289-8DBA-67EBCD900CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{D1D4B6AD-B0C0-405C-A7AC-0F567A9FCE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1D4B6AD-B0C0-405C-A7AC-0F567A9FCE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1D4B6AD-B0C0-405C-A7AC-0F567A9FCE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858E99CE-EFD4-482C-85B2-F0BE9729FEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858E99CE-EFD4-482C-85B2-F0BE9729FEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858E99CE-EFD4-482C-85B2-F0BE9729FEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858E99CE-EFD4-482C-85B2-F0BE9729FEA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
