@@ -16,7 +16,7 @@ namespace Quizzed.Entities.Models
         public string Name { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
-        public ICollection<Question> Questions { get; set; }
+        public IEnumerable<Question> Questions { get; set; }
 
     }
 }

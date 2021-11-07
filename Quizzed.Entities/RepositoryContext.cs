@@ -11,12 +11,15 @@ namespace Quizzed.Entities
     public class RepositoryContext : DbContext
     {
         public RepositoryContext(DbContextOptions options)
-            : base(options) { }
+            : base(options) 
+        {
+        }
 
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Concept> Concepts { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<Subject> Subjects { get; set; }
+        public DbSet<WrongAnswer> WrongAnswers { get; set; }
     }
 }

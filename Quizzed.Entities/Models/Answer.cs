@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Quizzed.Entities.Models
 {
@@ -7,7 +8,10 @@ namespace Quizzed.Entities.Models
     {
         [Key]
         public int Id { get; set; }
-        public string CorrectAnswers { get; set; }
-        public ICollection<string> WrongAnswers { get; set; }
+        public string Body { get; set;
+        }
+        [ForeignKey(nameof(WrongAnswer))]
+        public int WrongAnswerId { get; set; }
+        public IEnumerable<WrongAnswer> WrongAnswers { get; set; }
     }
 }
