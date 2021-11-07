@@ -21,8 +21,5 @@ namespace Quizzed.Entities.Models
         [ForeignKey(nameof(Answer))]
         public int AnswerId { get; set; }
         public IEnumerable<Answer> Answers { get; set; }
-        [ForeignKey(nameof(Subject))]
-        public int SubjectId { get; set; }
-        public Subject Subject { get; set; }
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quizzed.Entities;
 
 namespace Quizzed.WebAPI.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20211107153518_Update Quiz model")]
+    partial class UpdateQuizmodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,13 +31,10 @@ namespace Quizzed.WebAPI.Migrations
                     b.Property<string>("Body")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsAnswer")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("QuestionAnswerId")
+                    b.Property<int?>("QuestionId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("QuestionId")
+                    b.Property<int>("WrongAnswerId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -141,6 +140,26 @@ namespace Quizzed.WebAPI.Migrations
                     b.ToTable("Subjects");
                 });
 
+            modelBuilder.Entity("Quizzed.Entities.Models.WrongAnswer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("AnswerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Body")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AnswerId");
+
+                    b.ToTable("WrongAnswers");
+                });
+
             modelBuilder.Entity("Quizzed.Entities.Models.Answer", b =>
                 {
                     b.HasOne("Quizzed.Entities.Models.Question", null)
@@ -175,6 +194,18 @@ namespace Quizzed.WebAPI.Migrations
                     b.HasOne("Quizzed.Entities.Models.Quiz", null)
                         .WithMany("Subjects")
                         .HasForeignKey("QuizId");
+                });
+
+            modelBuilder.Entity("Quizzed.Entities.Models.WrongAnswer", b =>
+                {
+                    b.HasOne("Quizzed.Entities.Models.Answer", null)
+                        .WithMany("WrongAnswers")
+                        .HasForeignKey("AnswerId");
+                });
+
+            modelBuilder.Entity("Quizzed.Entities.Models.Answer", b =>
+                {
+                    b.Navigation("WrongAnswers");
                 });
 
             modelBuilder.Entity("Quizzed.Entities.Models.Question", b =>
