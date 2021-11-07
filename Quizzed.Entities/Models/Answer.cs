@@ -8,7 +8,7 @@ namespace Quizzed.Entities.Models
     {
         [Key]
         public int Id { get; set; }
-        public int QuestionAnswerId { get; set; }
+        public int AnswerGroupId { get; set; }
         public string Body { get; set; }
         public bool IsAnswer { get; set; }
     }

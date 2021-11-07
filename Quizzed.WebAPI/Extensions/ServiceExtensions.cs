@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Quizzed.Contracts;
 using Quizzed.Entities;
 using Quizzed.LoggerService;
+using Quizzed.Repository;
 
 namespace Quizzed.WebAPI.Extensions
 {
@@ -34,5 +35,7 @@ namespace Quizzed.WebAPI.Extensions
          opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b =>
         b.MigrationsAssembly("Quizzed.WebAPI")));
 
+        public static void ConfigureRepositoryManager(this IServiceCollection services) =>
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
     }
 }

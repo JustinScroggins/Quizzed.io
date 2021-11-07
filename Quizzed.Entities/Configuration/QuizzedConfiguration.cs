@@ -32,16 +32,39 @@ namespace Quizzed.Entities.Configuration
                                     {
                                         Id = 1,
                                         IsAnswer = true,
-                                        QuestionAnswerId = 1,
+                                        AnswerGroupId = 1,
                                         Body = "int number = 2;"
                                     },
                                     new Answer
                                     {
-
+                                        Id = 2,
+                                        IsAnswer= false,
+                                        AnswerGroupId = 1,
+                                        Body= "int number;"
+                                    },
+                                    new Answer
+                                    {
+                                        Id = 3,
+                                        IsAnswer = false,
+                                        AnswerGroupId = 1,
+                                        Body = "var number = 2"
+                                    },
+                                    new Answer
+                                    {
+                                        Id = 4,
+                                        IsAnswer = false,
+                                        AnswerGroupId = 1,
+                                        Body = "number = 2;"
                                     }
                                 }
                             }
+                        },
+                        Subject = new Subject
+                        {
+                            Id = 1,
+                            Name = "C#"
                         }
+
                     }
                 );
         }
