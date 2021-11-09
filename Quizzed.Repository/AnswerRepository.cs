@@ -14,7 +14,12 @@ namespace Quizzed.Repository
         public AnswerRepository(RepositoryContext repositoryContext)
             : base(repositoryContext)
         {
-
+    
         }
+
+        public IEnumerable<Answer> GetAllAnswers(bool trackChanges) =>
+            FindAll(trackChanges)
+            .OrderBy(c => c.Id)
+            .ToList();
     }
 }

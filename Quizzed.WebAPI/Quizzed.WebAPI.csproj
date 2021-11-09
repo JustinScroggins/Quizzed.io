@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Quizzed.Entities\Quizzed.Entities.csproj" />
     <ProjectReference Include="..\Quizzed.LoggerService\Quizzed.LoggerService.csproj" />
     <ProjectReference Include="..\Quizzed.Repository\Quizzed.Repository.csproj" />
   </ItemGroup>
