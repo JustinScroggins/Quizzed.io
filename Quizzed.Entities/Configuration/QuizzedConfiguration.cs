@@ -62,7 +62,18 @@ namespace Quizzed.Entities.Configuration
                         Subject = new Subject
                         {
                             Id = 1,
-                            Name = "C#"
+                            Name = "C#",
+                            Concepts = new List<Concept>
+                            {
+                                new Concept
+                                {
+                                    Id = 1,
+                                    Name = "Variables",
+                                    Explanation = "Variables are areas in memory which hold data of various types and are used for referencing in the code.",
+                                    CreatedOn = DateTime.Now
+
+                                }
+                            }
                         }
 
                     }

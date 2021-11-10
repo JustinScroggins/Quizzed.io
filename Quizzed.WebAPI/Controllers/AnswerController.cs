@@ -5,7 +5,7 @@ using System;
 namespace Quizzed.WebAPI.Controllers
 {
 
-    [Route("api/questions")]
+    [Route("api/answers")]
     [ApiController]
     public class AnswerController : ControllerBase
     {

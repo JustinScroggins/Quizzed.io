@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Quizzed.Entities.Configuration;
 using Quizzed.Entities.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,11 @@ namespace Quizzed.Entities
         public RepositoryContext(DbContextOptions options)
             : base(options) 
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new QuizzedConfiguration());
         }
 
         public DbSet<Answer> Answers { get; set; }
