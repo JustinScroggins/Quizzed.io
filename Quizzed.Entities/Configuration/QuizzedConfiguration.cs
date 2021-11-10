@@ -15,11 +15,26 @@ namespace Quizzed.Entities.Configuration
         {
             builder.HasData
                 (
+                        new Subject
+                        {
+                            Id = 1,
+                            Name = "C#",
+                            Concepts = new List<Concept>
+                            {
+                                new Concept
+                                {
+                                    Id = 1,
+                                    Name = "Variables",
+                                    Explanation = "Variables are areas in memory which hold data of various types and are used for referencing in the code.",
+                                    CreatedOn = DateTime.Now
+                                }
+                            }
+                        },
                     new Quiz
                     {
                         Id = 1,
                         Name = "Primitive Types and Expressions",
-                        CreatedOn = new DateTime(2021, 11, 7),
+                        CreatedOn = new DateTime(1980, 1, 2),
                         Questions = new List<Question>
                         {
                             new Question
@@ -58,26 +73,8 @@ namespace Quizzed.Entities.Configuration
                                     }
                                 }
                             }
-                        },
-                        Subject = new Subject
-                        {
-                            Id = 1,
-                            Name = "C#",
-                            Concepts = new List<Concept>
-                            {
-                                new Concept
-                                {
-                                    Id = 1,
-                                    Name = "Variables",
-                                    Explanation = "Variables are areas in memory which hold data of various types and are used for referencing in the code.",
-                                    CreatedOn = DateTime.Now
-
-                                }
-                            }
                         }
-
-                    }
-                );
+                    });
         }
     }
 }
