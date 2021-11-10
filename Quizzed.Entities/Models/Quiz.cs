@@ -17,7 +17,10 @@ namespace Quizzed.Entities.Models
         public string Name { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
-        public IEnumerable<Question> Questions { get; set; }
+        [ForeignKey(nameof(Questions))]
+        public int QuestionId { get; set; }
+        //public virtual Question Question { get; set; }
+        public virtual IEnumerable<Question> Questions { get; set; }
         public Subject Subject { get; set; }
     }
 }

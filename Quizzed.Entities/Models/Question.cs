@@ -15,17 +15,17 @@ namespace Quizzed.Entities.Models
         [Required(ErrorMessage = "The question body is required.")]
         [Display(Name = "Question Body")]
         public string Body { get; set; }
-        
-        [ForeignKey(nameof(Quiz))]
-        public int QuizId { get; set; }
-        public Quiz Quiz { get; set; }
-        
+
+        //[ForeignKey(nameof(Quiz))]
+        //public int QuizId { get; set; }
+        //public virtual Quiz Quiz { get; set; }
         [ForeignKey(nameof(Answer))]
         public int AnswerId { get; set; }
+        public virtual Answer Answer { get; set; }
         public IEnumerable<Answer> Answers { get; set; }
-        
+
         [ForeignKey(nameof(Concept))]
         public int ConceptId { get; set; }
-        public Concept Concept { get; set; }
+        public virtual Concept Concept { get; set; }
     }
 }
