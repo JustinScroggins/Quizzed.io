@@ -12,5 +12,8 @@ namespace Quizzed.Entities.Models
         public int AnswerGroupId { get; set; }
         public string Body { get; set; }
         public bool IsAnswer { get; set; }
+        [ForeignKey(nameof(Question))]
+        public int QuestionId { get; set; }
+        public Question Question { get; set; }
     }
 }

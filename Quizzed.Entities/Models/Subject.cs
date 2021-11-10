@@ -10,6 +10,6 @@ namespace Quizzed.Entities.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IEnumerable<Concept> Concepts { get; set; }
+        public ICollection<Concept> Concepts { get; set; }
     }
 }

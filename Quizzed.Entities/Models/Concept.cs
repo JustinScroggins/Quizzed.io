@@ -16,5 +16,8 @@ namespace Quizzed.Entities.Models
         public string Explanation { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
+        [ForeignKey(nameof(Subject))]
+        public int SubjectId { get; set; }
+        public Subject Subject { get; set; }
     }
 }
