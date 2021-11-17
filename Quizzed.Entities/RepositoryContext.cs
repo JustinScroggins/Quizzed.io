@@ -24,7 +24,7 @@ namespace Quizzed.Entities
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Concept> Concepts { get; set; }
         public DbSet<Question> Questions { get; set; }
-        public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Quiz> Quizzes { get; set; }
     }
 }

@@ -10,6 +10,5 @@ namespace Quizzed.Contracts
     public interface IAnswerRepository
     {
         IEnumerable<Answer> GetAllAnswers(bool trackChanges);
-
     }
 }
