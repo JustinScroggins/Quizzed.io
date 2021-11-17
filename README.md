@@ -5,7 +5,7 @@ help identify and quickly improve knowledge in domain areas.
 The application is built with:
 
 
-- NET 5.0
+- NET 5.0 Framework
 - ASP.NET WebAPI
 - Blazor WebAssembly
 
